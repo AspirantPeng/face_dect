@@ -448,6 +448,7 @@ private FaceFeature fea;
     public void do_something(Bitmap bmp, int[] face_rec){
         FaceFeature fea=preTF.recognizeImage(bmp);
         this.fea=fea;
+        boolean flag=false;
        // double dist=fea1.compare(fea);
         double dist=99;
 
@@ -456,10 +457,12 @@ private FaceFeature fea;
         while(iter.hasNext()){
             Entry<String,FaceFeature> entry=iter.next();//得到一个entry对象
             dist=fea.compare(entry.getValue());
-            if(dist<0.8)
-                drawResult(entry.getKey(),face_rec);
+            if(dist<0.9) {
+                drawResult(entry.getKey(), face_rec);
+                flag=true;
+            }
         }
-        if(dist>0.8)
+       if(flag==false)
         drawResult("未识别", face_rec);
 
     }
