@@ -1,0 +1,95 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:18:1-40:12
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\f474e1d58f99e3bba6e52152faba8644\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0e5f711beb1a8569c98ffe8367aa5bb7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\9ab8307ee042e3b0f7550bd5c6f39d2e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\a240b66b730ecf8af4ce808f6523f1bb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\b0e167258af0f9b18983b282d7c3f3ff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\990a7d1507bacb9f37dfc36162e11cd2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\3e4234f5cb48e42e2a1d9fda95e7f1a6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\21240f884ce106619883ef7c1522568c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\ccb1b93156cd1eab5c24628905128ef3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\2dfccf91cc0d53f2c822362e74e24d4f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\68f25004dc1cfef79971f566849273aa\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\14056e264cd0acf4d25390aa4a831927\AndroidManifest.xml:17:1-24:12
+	package
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:19:5-47
+	xmlns:android
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:18:11-69
+uses-permission#android.permission.CAMERA
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:23:5-60
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:23:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:24:5-70
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:24:19-67
+application
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:26:5-38:19
+	android:label
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:27:9-41
+	android:icon
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:28:9-45
+	android:allowBackup
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:26:18-44
+	android:theme
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:29:9-45
+activity#com.example.android.camera2basic.CameraActivity
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:31:9-37:20
+	android:label
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:32:19-51
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:31:19-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:33:13-36:29
+action#android.intent.action.MAIN
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml:35:27-74
+uses-sdk
+INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\f474e1d58f99e3bba6e52152faba8644\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\f474e1d58f99e3bba6e52152faba8644\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0e5f711beb1a8569c98ffe8367aa5bb7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0e5f711beb1a8569c98ffe8367aa5bb7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\9ab8307ee042e3b0f7550bd5c6f39d2e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\9ab8307ee042e3b0f7550bd5c6f39d2e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\a240b66b730ecf8af4ce808f6523f1bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\a240b66b730ecf8af4ce808f6523f1bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\b0e167258af0f9b18983b282d7c3f3ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\b0e167258af0f9b18983b282d7c3f3ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\990a7d1507bacb9f37dfc36162e11cd2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\990a7d1507bacb9f37dfc36162e11cd2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\3e4234f5cb48e42e2a1d9fda95e7f1a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\3e4234f5cb48e42e2a1d9fda95e7f1a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\21240f884ce106619883ef7c1522568c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\21240f884ce106619883ef7c1522568c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\ccb1b93156cd1eab5c24628905128ef3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\ccb1b93156cd1eab5c24628905128ef3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\2dfccf91cc0d53f2c822362e74e24d4f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\2dfccf91cc0d53f2c822362e74e24d4f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\68f25004dc1cfef79971f566849273aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\68f25004dc1cfef79971f566849273aa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\14056e264cd0acf4d25390aa4a831927\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\peng\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\14056e264cd0acf4d25390aa4a831927\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+		INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+		ADDED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml
+		INJECTED from D:\MyApplication\face_detectionforAndroid\Application\src\main\AndroidManifest.xml

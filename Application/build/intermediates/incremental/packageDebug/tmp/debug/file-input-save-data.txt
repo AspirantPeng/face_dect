@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Tue May 07 20:15:25 CST 2019
+1.base=D\:\\MyApplication\\face_detectionforAndroid\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+2.path=faceNet.pb
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=D\:\\MyApplication\\face_detectionforAndroid\\Application\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+3.set=DEX
+2.set=ASSET
+1.baseType=DIRECTORY
+3.path=classes.dex
+count=4
+1.set=DEX
+0.path=lib/armeabi-v7a/libtensorflow_inference.so
+3.base=D\:\\MyApplication\\face_detectionforAndroid\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+0.set=NATIVE_RESOURCE
+0.base=D\:\\MyApplication\\face_detectionforAndroid\\Application\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+2.baseType=DIRECTORY
+1.path=classes.dex
