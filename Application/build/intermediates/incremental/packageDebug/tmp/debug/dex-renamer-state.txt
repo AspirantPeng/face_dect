@@ -1,4 +1,4 @@
-#Tue May 07 20:33:53 CST 2019
+#Sun May 19 19:12:53 CST 2019
 base.0=D\:\\MyApplication\\face_detectionforAndroid\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.1=classes.dex
 renamed.1=classes2.dex

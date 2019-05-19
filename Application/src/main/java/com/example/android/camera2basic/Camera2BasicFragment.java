@@ -28,6 +28,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
@@ -69,6 +70,8 @@ import android.view.SurfaceView;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.File;
@@ -79,8 +82,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
+import java.util.Set;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
@@ -437,15 +444,24 @@ public class Camera2BasicFragment extends Fragment
     /**
      * 你的do_something 函数 传入人脸位图和人脸框位置 处理人脸数据得到结果显示在人脸框边上
      * */
+private FaceFeature fea;
     public void do_something(Bitmap bmp, int[] face_rec){
         FaceFeature fea=preTF.recognizeImage(bmp);
-        double dist=fea1.compare(fea);
-        String recognition_result1 = "是本人"+dist;
-        String recognition_result2 = "不是本人"+dist;
+        this.fea=fea;
+       // double dist=fea1.compare(fea);
+        double dist=99;
+
+        Set<Entry<String,FaceFeature>> set=all_faces.entrySet();
+        Iterator<Entry<String,FaceFeature>> iter=set.iterator();
+        while(iter.hasNext()){
+            Entry<String,FaceFeature> entry=iter.next();//得到一个entry对象
+            dist=fea.compare(entry.getValue());
+            if(dist<0.8)
+                drawResult(entry.getKey(),face_rec);
+        }
         if(dist>0.8)
-            drawResult(recognition_result2, face_rec);
-        else
-            drawResult(recognition_result1, face_rec);
+        drawResult("未识别", face_rec);
+
     }
 
     /**
@@ -530,9 +546,8 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
-    public static Camera2BasicFragment newInstance(AssetManager assetManager,Bitmap bitmap) {
+    public static Camera2BasicFragment newInstance(AssetManager assetManager) {
         am=assetManager;
-        bitmap1=bitmap;
         return new Camera2BasicFragment();
     }
 
@@ -544,26 +559,28 @@ public class Camera2BasicFragment extends Fragment
     private  static AssetManager am;
     private SurfaceView surfaceview;
     private SurfaceView surfaceview_result;
+    private Button mButton;
+    private Map<String,FaceFeature> all_faces;
+    private EditText et;
     private SurfaceHolder surfaceHolder;
     private SurfaceHolder surfaceResultHolder;
     private PredictionTF preTF;
-    private FaceFeature fea1;
-    private static Bitmap bitmap1;
+    //private FaceFeature fea1;
+    //private static Bitmap bitmap1;
     private static final String MODEL_FILE = "file:///android_asset/faceNet.pb";
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
-        if(bitmap1==null)
-            Log.e(TAG,"图片加载失败");
-        else
-            Log.e(TAG,"图片加载成功");
-        preTF = new PredictionTF(am,MODEL_FILE);
-        fea1=preTF.recognizeImage(bitmap1);
 
+        preTF = new PredictionTF(am,MODEL_FILE);
+       // fea1=preTF.recognizeImage(bitmap1);
+        all_faces=new HashMap<String, FaceFeature>();
        // fea1=new FaceFeature();
         view.findViewById(R.id.picture).setOnClickListener(this);
         view.findViewById(R.id.info).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
-
+        mButton=(Button) view.findViewById(R.id.button4);
+        et=(EditText)view.findViewById(R.id.editText);
+        mButton.setOnClickListener(this);
         view.findViewById(R.id.surfaceview_show_rectangle).setOnClickListener(this);
         // 设置画人脸框的surface
         surfaceview = (SurfaceView)view.findViewById(R.id.surfaceview_show_rectangle);
@@ -1075,6 +1092,17 @@ public class Camera2BasicFragment extends Fragment
                             .show();
                 }
                 break;
+            }
+            case R.id.button4:{
+
+                String name=et.getText().toString();
+                all_faces.put(name,this.fea);
+                new AlertDialog.Builder(getActivity())
+                        .setMessage("人脸信息已添加")
+                        .setPositiveButton(android.R.string.ok, null)
+                        .show();
+
+                Log.e(TAG, all_faces.toString());
             }
         }
     }

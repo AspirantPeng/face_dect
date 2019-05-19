@@ -577,8 +577,6 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_action_info
 drawable ic_launcher
-drawable my_face
-drawable my_face1
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -627,6 +625,7 @@ id async
 id beginning
 id blocking
 id bottom
+id button4
 id buttonPanel
 id cancel_action
 id checkbox
@@ -640,6 +639,7 @@ id customPanel
 id decor_content_parent
 id default_activity_button
 id disableHome
+id editText
 id edit_query
 id end
 id end_padder

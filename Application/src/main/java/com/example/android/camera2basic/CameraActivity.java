@@ -16,6 +16,7 @@
 
 package com.example.android.camera2basic;
 
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -27,15 +28,11 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bitmap bitmap=BitmapFactory.decodeStream(getClass().getResourceAsStream("/res/drawable/my_face1.png"));
-        if(bitmap==null)
-            Log.e(TAG,"11111");
-        else
-            Log.e(TAG,"22222");
+        //Bitmap bitmap=BitmapFactory.decodeStream(getClass().getResourceAsStream("/res/drawable/my_face1.png"));
         setContentView(R.layout.activity_camera);
         if (null == savedInstanceState) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance(getAssets(),bitmap))
+                    .replace(R.id.container, Camera2BasicFragment.newInstance(getAssets()))
                     .commit();
         }
     }
