@@ -332,6 +332,8 @@ public class Camera2BasicFragment extends Fragment
                             // 预览模式下的情况 在这里获得预览图像用于输入你的神经网络中 得到结果
                             // bitmap_get就是我们通过getBitmap方法得到的实时画面
                             Bitmap bitmap_get= mTextureView.getBitmap();
+                            if(face_rec[3]>bitmap_get.getHeight())
+                                face_rec[3]=bitmap_get.getHeight();
                             // 将人脸从整个预览画面中裁剪出来
                             bitmap_get = Bitmap.createBitmap(bitmap_get, face_rec[0], face_rec[1],face_rec[2]-face_rec[0] ,face_rec[3]-face_rec[1]);
                             do_something(bitmap_get, face_rec);
@@ -1104,7 +1106,7 @@ private FaceFeature fea;
                         .setMessage("人脸信息已添加")
                         .setPositiveButton(android.R.string.ok, null)
                         .show();
-
+                et.setText("");
                 Log.e(TAG, all_faces.toString());
             }
         }
